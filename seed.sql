@@ -8,13 +8,13 @@ values
     ('Fran');
 
 insert into posts
-    (postContent, postDate)
+    (title, postContent, postDate)
 values
-    ('some content', '2018-01-01'),
-    ('this is also content', '2017-02-10'),
-    ('placeholder content', '2018-10-20'),
-    ('summary', '2018-05-25'),
-    ('example number five', '2017-11-18');
+    ('title1', 'some content', '2018-01-01'),
+    ('title2', 'this is also content', '2017-02-10'),
+    ('title3', 'placeholder content', '2018-10-20'),
+    ('title4', 'summary', '2018-05-25'),
+    ('title5', 'example number five', '2017-11-18');
 
 insert into comments
     (commentContent, commentDate)

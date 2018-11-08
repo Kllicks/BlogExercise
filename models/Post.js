@@ -1,12 +1,15 @@
 const db = require('./db');
 
 class Post{
-    constructor(){
-
+    constructor(id, title, postContent, postDate){
+        this.id = id;
+        this.title = title;
+        this.postContent = postContent;
+        this.postDate = postDate;
     }
 
     // CREATE
-
+    
 
     // RETRIEVE
 

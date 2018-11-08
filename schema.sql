@@ -11,6 +11,7 @@ create table authors (
     -- postDate
 create table posts (
     id serial primary key,
+    title text,
     postContent text,
     postDate date,
     author_id integer references authors (id)

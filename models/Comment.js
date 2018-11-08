@@ -1,7 +1,10 @@
 const db = require('./db');
 
 class Comment{
-    constructor(){
+    constructor(id, commentContent, commentDate){
+        this.id = id;
+        this.commentContent = commentContent;
+        this.commentDate = commentDate;
 
     }
 
