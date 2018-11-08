@@ -5,7 +5,6 @@ class Comment{
         this.id = id;
         this.commentContent = commentContent;
         this.commentDate = commentDate;
-
     }
 
     // CREATE
