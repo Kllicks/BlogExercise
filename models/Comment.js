@@ -8,7 +8,13 @@ class Comment{
     }
 
     // CREATE
-
+    static add(commentContent, commentDate) {
+        return db.one(`insert into comments (commentContent, commentDate)
+            values
+                ($1, $2)
+            returning id
+        `, [commentContent, commentDate]) 
+    }
 
     // RETRIEVE
 

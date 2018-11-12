@@ -9,7 +9,13 @@ class Post{
     }
 
     // CREATE
-    
+    static add(title, postContent, postDate) {
+        return db.one(`insert into posts (title, postContent, postDate)
+            values
+                ($1, $2, $3)
+            returning id
+        `, [title, postContent, postDate]) 
+    }
 
     // RETRIEVE
 
