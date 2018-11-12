@@ -17,7 +17,13 @@ class Comment{
     }
 
     // RETRIEVE
-
+    static getById(id){
+        return db.one(`select * from comments where id = $1`, [id])
+            .then(result => {
+                const u = new Comment(result.id, result.commentContent, result.commentDate);
+                return u;
+            })
+    }
 
     // UPDATE
 

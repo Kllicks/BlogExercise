@@ -18,6 +18,15 @@ class Post{
     }
 
     // RETRIEVE
+    static getById(id){
+        return db.one(`select * from posts where id = $1`, [id])
+            .then(result => {
+                const u = new Post(result.id, 
+                    result.title,
+                    result.postContent, result.postDate);
+                return u;
+            })
+    }
 
 
     // UPDATE
